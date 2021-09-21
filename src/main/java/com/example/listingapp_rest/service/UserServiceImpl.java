@@ -2,7 +2,7 @@ package com.example.listingapp_rest.service;
 
 import com.example.listingapp_rest.model.User;
 import com.example.listingapp_rest.repository.UserRepository;
-import com.example.listingapp_rest.service.impl.UserServiceImpl;
+import com.example.listingapp_rest.service.impl.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -11,14 +11,13 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-public class UserService implements UserServiceImpl {
+public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
 
     @Override
     public Optional<User> findById(int id) {
         return userRepository.findById(id);
     }
-
 
 
     @Override
@@ -31,6 +30,11 @@ public class UserService implements UserServiceImpl {
     public List<User> findAll() {
         return userRepository.findAll();
 
+    }
+
+    @Override
+    public Optional<User> findByEmail(String email) {
+        return userRepository.findByEmail(email);
     }
 
     @Override

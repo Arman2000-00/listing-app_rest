@@ -5,7 +5,7 @@ import com.example.listingapp_rest.model.Listing;
 import java.util.List;
 import java.util.Optional;
 
-public interface ListingServiceImpl {
+public interface ListingService {
     Listing save(Listing listing);
 
     Optional<Listing> findById(int id);

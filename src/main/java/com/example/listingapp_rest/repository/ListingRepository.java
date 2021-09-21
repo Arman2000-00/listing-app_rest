@@ -10,5 +10,4 @@ public interface ListingRepository extends JpaRepository<Listing, Integer> {
     List<Listing> findAllByUserEmail(String email);
     List<Listing> findAllByCategoryId(int id);
 
-    Optional<Listing> findByUserEmail(String email);
 }

@@ -1,9 +1,7 @@
 package com.example.listingapp_rest.endpoint;
 
 import com.example.listingapp_rest.model.Category;
-import com.example.listingapp_rest.model.User;
-import com.example.listingapp_rest.repository.CategoryRepository;
-import com.example.listingapp_rest.service.CategoryService;
+import com.example.listingapp_rest.service.CategoryServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +12,7 @@ import java.util.Optional;
 @RestController
 @RequiredArgsConstructor
 public class CategoryEndpoint {
-    private final CategoryService categoryService;
+    private final CategoryServiceImpl categoryService;
 
     @GetMapping("/categories")
     public List<Category> findAllUsers() {

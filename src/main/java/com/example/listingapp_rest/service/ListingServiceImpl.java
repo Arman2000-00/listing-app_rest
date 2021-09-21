@@ -2,7 +2,6 @@ package com.example.listingapp_rest.service;
 
 import com.example.listingapp_rest.model.Listing;
 import com.example.listingapp_rest.repository.ListingRepository;
-import com.example.listingapp_rest.service.impl.ListingServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +10,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-public class ListingService implements ListingServiceImpl {
+public class ListingServiceImpl implements com.example.listingapp_rest.service.impl.ListingService {
 
     private final ListingRepository listingRepository;
 
@@ -26,9 +25,6 @@ public class ListingService implements ListingServiceImpl {
         return listingRepository.findById(id);
     }
 
-    public Optional<Listing> findByEmail(String email) {
-        return listingRepository.findByUserEmail(email);
-    }
 
 
     @Override

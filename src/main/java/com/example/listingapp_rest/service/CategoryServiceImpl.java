@@ -2,7 +2,6 @@ package com.example.listingapp_rest.service;
 
 import com.example.listingapp_rest.model.Category;
 import com.example.listingapp_rest.repository.CategoryRepository;
-import com.example.listingapp_rest.service.impl.CategoryServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +10,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-public class CategoryService implements CategoryServiceImpl {
+public class CategoryServiceImpl implements com.example.listingapp_rest.service.impl.CategoryService {
     private final CategoryRepository categoryRepository;
 
     @Override
